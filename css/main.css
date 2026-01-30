@@ -1422,14 +1422,17 @@ section,
   /* Add your styles here */
 }
 @media (max-width: 768px) {
-  .hero img {
-    object-position: top center;
+  .hero {
+    min-height: auto !important;
+    height: auto !important;
   }
-}
-@media (max-width: 768px) {
+
   .hero img {
-    object-fit: contain;
-    object-position: center top;
+    position: relative !important;
+    width: 100% !important;
+    height: auto !important;
+    object-fit: contain !important;
+    object-position: center top !important;
     background-color: #000;
   }
 }
