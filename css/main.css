@@ -1426,3 +1426,10 @@ section,
     object-position: top center;
   }
 }
+@media (max-width: 768px) {
+  .hero img {
+    object-fit: contain;
+    object-position: center top;
+    background-color: #000;
+  }
+}
