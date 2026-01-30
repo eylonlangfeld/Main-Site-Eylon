@@ -687,7 +687,7 @@ section,
 }
 
 /*--------------------------------------------------------------
-# Hero Section
+# Hero Section (FIXED – Desktop + Mobile)
 --------------------------------------------------------------*/
 .hero {
   width: 100%;
@@ -697,6 +697,7 @@ section,
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
 }
 
 @media (max-width: 1200px) {
@@ -708,16 +709,18 @@ section,
 .hero img {
   position: absolute;
   inset: 0;
-  display: block;
   width: 100%;
   height: 100%;
+  display: block;
   object-fit: cover;
+  object-position: center top;
   z-index: 1;
 }
 
 .hero .container {
   position: relative;
   z-index: 3;
+  text-align: center;
 }
 
 .hero h2 {
@@ -747,11 +750,21 @@ section,
   margin-top: 30px;
 }
 
-.hero .btn-get-started:hover {
-  background: color-mix(in srgb, var(--accent-color) 90%, white 20%);
-}
-
+/* ---------------- MOBILE ---------------- */
 @media (max-width: 768px) {
+  .hero {
+    padding: 60px 0 40px;
+  }
+
+  .hero img {
+    object-fit: contain;          /* לא חותך */
+    object-position: center top;
+  }
+
+  .hero .container {
+    padding-top: 55vh;            /* משאיר מקום לתמונה */
+  }
+
   .hero h2 {
     font-size: 32px;
   }
@@ -1420,19 +1433,4 @@ section,
 --------------------------------------------------------------*/
 .starter-section {
   /* Add your styles here */
-}
-@media (max-width: 768px) {
-  .hero {
-    min-height: auto !important;
-    height: auto !important;
-  }
-
-  .hero img {
-    position: relative !important;
-    width: 100% !important;
-    height: auto !important;
-    object-fit: contain !important;
-    object-position: center top !important;
-    background-color: #000;
-  }
-}
+ש
